@@ -27,19 +27,16 @@ Installation
 -Ensure to start your queue workers as broadcasting uses database queue driver, run the command `php artisan queue:work`.
 -`npm run watch`
 
+## Screenshots of S.P.R.F !!
+![Screenshots](https://res.cloudinary.com/demeqf2er/image/upload/v1577363287/samples/1sprf_jqvwmd.png)
 
-![Screenshot][id]
-[id]: https://res.cloudinary.com/demeqf2er/image/upload/v1577363287/samples/1sprf_jqvwmd.png  "Screenshots"
-![Screenshot][id]
-[id]: https://res.cloudinary.com/demeqf2er/image/upload/v1577363287/samples/5sprf_vc77fa.png  "Screenshots"
-![Screenshot][id]
-[id]: https://res.cloudinary.com/demeqf2er/image/upload/v1577363286/samples/3sprf_y3ymdx.png  "Screenshots"
-![Screenshot][id]
-[id]: https://res.cloudinary.com/demeqf2er/image/upload/v1577363286/samples/4sprf_w8p9cc.png  "Screenshots"
-![Screenshot][id]
-[id]: https://res.cloudinary.com/demeqf2er/image/upload/v1577363286/samples/2sprf_evl6eu.png  "Screenshots"
+![Screenshot](https://res.cloudinary.com/demeqf2er/image/upload/v1577363287/samples/1sprf_jqvwmd.png)
+![Screenshot](https://res.cloudinary.com/demeqf2er/image/upload/v1577363287/samples/5sprf_vc77fa.png)
+![Screenshot](https://res.cloudinary.com/demeqf2er/image/upload/v1577363286/samples/3sprf_y3ymdx.png)
+[id]: https://res.cloudinary.com/demeqf2er/image/upload/v1577363286/samples/4sprf_w8p9cc.png)
+![Screenshot](https://res.cloudinary.com/demeqf2er/image/upload/v1577363286/samples/2sprf_evl6eu.png)
 
-> See **[Video Tutorial](https://vimeo.com/334331502)**.
+> See **[Video Tutorial](https://res.cloudinary.com/demeqf2er/video/upload/v1577369337/samples/hNLbY1y3It_jat1hk.mp4)**.
 
 [![Video Demo](https://res.cloudinary.com/demeqf2er/image/upload/v1577363286/samples/3sprf_y3ymdx.png)](https://res.cloudinary.com/demeqf2er/video/upload/v1577369337/samples/hNLbY1y3It_jat1hk.mp4 "Demo Video")
 
