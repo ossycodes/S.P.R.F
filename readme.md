@@ -23,8 +23,10 @@ Installation
 
 -*Take note of the .env file (It contains the neccessary environmental configurations, eg PUSHER_APP_ID, PUSHER_APP_KEY, PUSHER_APP_SECRET, PUSHER_APP_CLUSTER)*
 *Hence ensure that you register and create a new app on pusher to get your pusher details*
--start the server, php artisan serve
--npm run watch
+-start the server, `php artisan serve`
+-Ensure to start your queue workers as broadcasting uses database queue driver, run the command `php artisan queue:work`.
+-`npm run watch`
+
 
 ![Screenshot][id]
 [id]: https://res.cloudinary.com/demeqf2er/image/upload/v1577363287/samples/1sprf_jqvwmd.png  "Screenshots"
@@ -37,8 +39,14 @@ Installation
 ![Screenshot][id]
 [id]: https://res.cloudinary.com/demeqf2er/image/upload/v1577363286/samples/2sprf_evl6eu.png  "Screenshots"
 
+> See **[Video Tutorial](https://vimeo.com/334331502)**.
+
+[![Video Demo](https://res.cloudinary.com/demeqf2er/image/upload/v1577363286/samples/3sprf_y3ymdx.png)](https://res.cloudinary.com/demeqf2er/video/upload/v1577369337/samples/hNLbY1y3It_jat1hk.mp4 "Demo Video")
+
 ## Contributing
-Been really busy lately to update the readme page, so If you want to help make the readme better, please send a pull request.
-Thank you for considering contributing to this project.
+Fork the repo, clone your fork,checkout feature branch, make changes, commit and send a PR. Please do well to Star the project, thank you.
+
+## Todos
+Write tests
 
 
