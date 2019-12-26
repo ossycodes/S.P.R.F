@@ -7,7 +7,7 @@
 +   Vuerouter
 +   Pusher
 +   Json Web Tokens
-+   Materialize
++   Vuetify
 
 
 Installation
@@ -36,7 +36,7 @@ Installation
 [id]: https://res.cloudinary.com/demeqf2er/image/upload/v1577363286/samples/4sprf_w8p9cc.png)
 ![Screenshot](https://res.cloudinary.com/demeqf2er/image/upload/v1577363286/samples/2sprf_evl6eu.png)
 
-> See **[Video Tutorial](https://res.cloudinary.com/demeqf2er/video/upload/v1577369337/samples/hNLbY1y3It_jat1hk.mp4)**.
+> See **[Video Demo](https://res.cloudinary.com/demeqf2er/video/upload/v1577369337/samples/hNLbY1y3It_jat1hk.mp4)**.
 
 [![Video Demo](https://res.cloudinary.com/demeqf2er/image/upload/v1577363286/samples/3sprf_y3ymdx.png)](https://res.cloudinary.com/demeqf2er/video/upload/v1577369337/samples/hNLbY1y3It_jat1hk.mp4 "Demo Video")
 
