@@ -32,6 +32,16 @@ class User extends Authenticatable implements JWTSubject
     ];
 
 
+     /**
+     * The channels the user receives notification broadcasts on.
+     *
+     * @return string
+     */
+    // public function receivesBroadcastNotificationsOn()
+    // {
+    //     return 'App.User.0001';
+    // }
+
     /**
      * Encrypts the User's password.
      *

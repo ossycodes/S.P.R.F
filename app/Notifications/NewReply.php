@@ -32,7 +32,7 @@ class NewReply extends Notification
      */
     public function via($notifiable)
     {
-        return ['database', 'broadcast'];
+        return ['database'];
     }
 
     /**
@@ -73,14 +73,14 @@ class NewReply extends Notification
      * @param  mixed  $notifiable
      * @return BroadcastMessage
      */
-    public function toBroadcast($reply)
-    {
-        return new BroadcastMessage([
-            'message' => "you have a new reply for your question: {$this->reply->question->title} by: {$this->reply->user->name}",
-            'replyBy' => $this->reply->user->name,
-            'question' => $this->reply->question->title,
-            'path' => $this->reply->question->path,
-            'reply' => new ReplyResource($this->reply)
-        ]);
-    }
+    // public function toBroadcast($reply)
+    // {
+    //     return new BroadcastMessage([
+    //         'message' => "you have a new reply for your question: {$this->reply->question->title} by: {$this->reply->user->name}",
+    //         'replyBy' => $this->reply->user->name,
+    //         'question' => $this->reply->question->title,
+    //         'path' => $this->reply->question->path,
+    //         'reply' => new ReplyResource($this->reply)
+    //     ]);
+    // }
 }

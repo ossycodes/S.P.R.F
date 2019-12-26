@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\DeleteReplyEvent;
 use App\Model\Reply;
 use App\Model\Question;
 use Illuminate\Http\Request;
 use App\Notifications\NewReply;
+use App\Events\CreateReplyEvent;
+use App\Events\DeleteReplyEvent;
 use App\Http\Resources\ReplyResource;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -41,6 +42,7 @@ class ReplyController extends Controller
             'user_id' => auth()->user()->id
         ]);
         $user = $question->user;
+        broadcast(new CreateReplyEvent($reply))->toOthers();
         if ($reply->user_id !== $question->user_id) {
             $user->notify(new NewReply($reply));
         }

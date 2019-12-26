@@ -51,6 +51,7 @@ export default {
           });
         })
         .catch(err => {
+          console.log(err);
           swal({
             title: "Something went wrong",
             icon: "error"

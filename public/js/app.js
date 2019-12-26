@@ -98733,7 +98733,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("v-card-text", [_vm._v(_vm._s(_vm.body))])
+      _c("v-card-text", { domProps: { innerHTML: _vm._s(_vm.body) } })
     ],
     1
   )
@@ -99849,10 +99849,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 
 
@@ -99898,8 +99894,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     listenForBroadcastEvent: function listenForBroadcastEvent() {
       var _this3 = this;
 
-      Echo.private("App.User." + __WEBPACK_IMPORTED_MODULE_1__resources_assets_js_helpers_Users__["a" /* default */].getId()).notification(function (notification) {
-        _this3.content.unshift(notification.reply);
+      Echo.channel("createReplyChannel").listen("CreateReplyEvent", function (e) {
+        _this3.content.unshift(e.reply);
       });
     },
     listenForReplyDeletedBroadcastEvent: function listenForReplyDeletedBroadcastEvent() {
@@ -100341,6 +100337,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           icon: "success"
         });
       }).catch(function (err) {
+        console.log(err);
         swal({
           title: "Something went wrong",
           icon: "error"

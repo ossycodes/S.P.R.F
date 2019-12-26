@@ -1,11 +1,7 @@
 <template>
   <v-container>
     <div v-for="(reply, index) in content" :key="reply.id">
-      <single-reply
-        :reply="reply"
-        :index="index"
-        :questionSlug="questionSlug"
-      ></single-reply>
+      <single-reply :reply="reply" :index="index" :questionSlug="questionSlug"></single-reply>
     </div>
   </v-container>
 </template>
@@ -46,8 +42,8 @@ export default {
       });
     },
     listenForBroadcastEvent() {
-      Echo.private(`App.User.${Users.getId()}`).notification(notification => {
-        this.content.unshift(notification.reply);
+      Echo.channel("createReplyChannel").listen("CreateReplyEvent", e => {
+        this.content.unshift(e.reply);
       });
     },
     listenForReplyDeletedBroadcastEvent() {

@@ -11,14 +11,18 @@
 |
 */
 
-Broadcast::channel('App.User.{user}', function ($user) {
-    return true;
-});
+// Broadcast::channel('App.User.0001', function ($user) {
+//     return true;
+// });
 
 Broadcast::channel('likeReplyChannel', function () {
     return true;
 });
 
 Broadcast::channel('deleteReplyChannel', function () {
+    return true;
+});
+
+Broadcast::channel('createReplyChannel', function () {
     return true;
 });

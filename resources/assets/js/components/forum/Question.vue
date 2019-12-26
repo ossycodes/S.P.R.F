@@ -8,7 +8,7 @@
         <div class="grey--text">said {{ createdAt }} by {{ user }}</div>
       </div>
     </v-card-title>
-    <v-card-text>{{ body }}</v-card-text>
+    <v-card-text v-html="body"></v-card-text>
   </v-card>
 </template>
 <script>
