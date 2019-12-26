@@ -59,14 +59,12 @@ window.Pusher = require("pusher-js");
 
 window.Echo = new Echo({
   broadcaster: "pusher",
-  key: "84303af8817e5091573f",
+  key: "5a90a5704e8d09e949e4",
   cluster: "eu",
   encrypted: true,
-  // authEndpoint: "/broadcasting/auth",
   auth: {
     headers: {
       Authorization: authourizationToken
-      // Accept: "application/json"
     }
   }
 });

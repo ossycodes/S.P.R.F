@@ -134,15 +134,7 @@ export default {
           });
         });
     },
-    // fi(element) {
-    //   this.bc.forEach((el) => {
-    //     el.name = this.form.name
-    //   });
-    //   // console.log(element);
-    //   // return element === this.form.name;
-    // },
     cancel(x) {
-      // console.log(this.bc.findIndex(this.fi));
       this.editSlug = null;
       this.form.name = "";
     }

@@ -8,10 +8,8 @@ class User {
       .post("/api/auth/login", credentials)
       .then(res => this.responseAfterLogin(res))
       .catch(err => {
-        err;
-        // console.log(err.response);
+        console.log(err);
       });
-    // .catch(error => EventBus.$emit('loginError', error.response));
   }
 
   responseAfterLogin(res) {
@@ -35,8 +33,6 @@ class User {
   isLoggedIn() {
     return Token.hasToken();
   }
-
-
 
   getName() {
     if (!this.isLoggedIn) {

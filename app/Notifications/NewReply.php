@@ -65,6 +65,8 @@ class NewReply extends Notification
         ];
     }
 
+
+
     /**
      * Get the broadcastable representation of the notification.
      *

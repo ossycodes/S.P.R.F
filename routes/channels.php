@@ -11,13 +11,8 @@
 |
 */
 
-Broadcast::channel('App.User.{id}', function ($user, $id) {
-    // return true;
-    // // return true;
-    dd($user->id, $id);
-    // // dd($user);
-    // return (int) 2 === (int) $id;
-    // return $user->id === $user->id;
+Broadcast::channel('App.User.{user}', function ($user) {
+    return true;
 });
 
 Broadcast::channel('likeReplyChannel', function () {

@@ -43,9 +43,6 @@ export default {
     EventBus.$on("replyDeleted", () => {
       this.replyCount--;
     });
-    // Echo.private("App.User." + 2).notification(notification => {
-    //   this.replyCount++;
-    // });
     Echo.channel("deleteReplyChannel").listen("DeleteReplyEvent", e => {
       this.replyCount--;
     });

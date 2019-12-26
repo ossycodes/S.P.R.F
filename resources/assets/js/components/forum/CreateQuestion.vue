@@ -74,10 +74,7 @@ export default {
         this.categories = res.data.data;
       })
       .catch(error => {
-        //  swal({
-        //     title: "Something went wrong",
-        //     icon: "error"
-        //   });
+        console.log(error);
       });
   }
 };

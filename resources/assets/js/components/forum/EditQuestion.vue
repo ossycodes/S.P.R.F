@@ -26,10 +26,6 @@ export default {
       form: {
         title: null,
         body: null
-        // title: this.singleQuestion.title,
-        // body: this.singleQuestion.body,
-        // user_id: this.singleQuestion.user_id,
-        // category_id: this.singleQuestion.category.id
       }
     };
   },

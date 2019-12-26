@@ -28,6 +28,7 @@ export default {
   },
   methods: {
     createReply() {
+      console.log(this.questionSlug);
       axios
         .post(`/api/questions/${this.questionSlug}/replies`, {
           body: this.body

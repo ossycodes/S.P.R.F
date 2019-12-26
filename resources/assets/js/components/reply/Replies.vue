@@ -1,12 +1,17 @@
 <template>
   <v-container>
     <div v-for="(reply, index) in content" :key="reply.id">
-      <single-reply :reply="reply" :index="index" :questionSlug="questionSlug"></single-reply>
+      <single-reply
+        :reply="reply"
+        :index="index"
+        :questionSlug="questionSlug"
+      ></single-reply>
     </div>
   </v-container>
 </template>
 <script>
 import SingleReply from "./SingleReply";
+import Users from "../../../../../resources/assets/js/helpers/Users";
 export default {
   props: ["replies", "questionSlug"],
   data() {
@@ -21,11 +26,12 @@ export default {
     this.replyCreated();
     this.replyDeleted();
     this.listenForReplyDeletedBroadcastEvent();
-    // this.listenForBroadcastEvent();
+    this.listenForBroadcastEvent();
   },
   methods: {
     replyCreated() {
       EventBus.$on("replyCreated", reply => {
+        this.idOfCreatedReply = reply;
         this.content.unshift(reply);
         window.scroll(0, 0);
       });
@@ -40,10 +46,8 @@ export default {
       });
     },
     listenForBroadcastEvent() {
-      Echo.private("App.User." + User.getId()).notification(notification => {
-        console.log(notification);
-        // this.content.unshift(notification.reply);
-        //this.re
+      Echo.private(`App.User.${Users.getId()}`).notification(notification => {
+        this.content.unshift(notification.reply);
       });
     },
     listenForReplyDeletedBroadcastEvent() {
@@ -54,7 +58,6 @@ export default {
           }
         });
       });
-
     }
   }
 };
